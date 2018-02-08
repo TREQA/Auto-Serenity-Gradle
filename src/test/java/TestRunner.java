@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features"
-        //,tags = "@debug"
+        ,tags = "@debug"
 )
 public class TestRunner {
 

@@ -1,6 +1,7 @@
 package pages;
 
-import net.serenitybdd.core.annotations.findby.FindBy;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.WebDriver;
 import utils.BasePage;
@@ -12,5 +13,5 @@ public class SelectDropdownPage extends BasePage{
     public SelectDropdownPage(WebDriver driver){super(driver);}
 
     @FindBy(xpath="//DIV[text()='Select List Demo']")
-    public WebElementFacade simpleSelectElement;
+    public WebElement simpleSelectElement;
 }

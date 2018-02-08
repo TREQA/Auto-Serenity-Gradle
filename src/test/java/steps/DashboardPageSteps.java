@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import pages.DashboardPage;
+import pages.DownloadProgressPage;
 import pages.SelectDropdownPage;
 import utils.TestData;
 
@@ -17,6 +18,7 @@ public class DashboardPageSteps {
 
     DashboardPage dashboardPage;
     SelectDropdownPage selectDropdownPage;
+    DownloadProgressPage downloadProgressPage;
 
     @Given("^I am on the selenium website homepage for test$")
     public void iAmOnTheSeleniumWebsiteHomepageForTest() {
@@ -39,4 +41,6 @@ public class DashboardPageSteps {
     public void iAmOnPage(String Title) {
         Assert.assertTrue(selectDropdownPage.simpleSelectElement.getText().trim().equals(Title));
     }
+
+
 }

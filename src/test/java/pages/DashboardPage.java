@@ -1,6 +1,7 @@
 package pages;
 
-import net.serenitybdd.core.annotations.findby.FindBy;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.locators.WebElementFacadeImplLocator;
@@ -17,9 +18,9 @@ public class DashboardPage extends BasePage{
     public DashboardPage(WebDriver driver){super(driver);}
 
     @FindBy (id="btn_basic_example")
-    public WebElementFacade startPracticeBtn;
+    public WebElement startPracticeBtn;
 
-    public WebElementFacade category(String category){
+    public WebElement category(String category){
         return $("//P[text()='Assuming you have a basic understanding of HTML and CSS.']/..//A[text()='" + category + "']");
     }
 }
