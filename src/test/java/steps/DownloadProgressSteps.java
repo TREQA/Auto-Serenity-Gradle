@@ -18,7 +18,6 @@ public class DownloadProgressSteps {
         downloadProgressPage.open();
     }
 
-
     @And("^I click on Download File$")
     public void iClickOnDownloadFile() {
         downloadProgressPage.clickOn(downloadProgressPage.downloadBtn);
