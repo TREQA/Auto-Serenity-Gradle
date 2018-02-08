@@ -1,0 +1,49 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.6.0")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile('junit:junit:4.12')
+    testCompile('org.assertj:assertj-core:3.8.0')
+    testCompile('org.slf4j:slf4j-simple:1.7.7')
+    testCompile('net.serenity-bdd:serenity-core:1.6.0')
+    testCompile('net.serenity-bdd:serenity-junit:1.6.0')
+    testCompile('net.serenity-bdd:serenity-rest-assured:1.6.0')
+    testCompile('net.serenity-bdd:serenity-spring:1.6.0')
+    testCompile('net.serenity-bdd:serenity-cucumber:1.5.9')
+    testCompile('org.apache.poi:poi:3.17')
+    testCompile('org.apache.poi:poi-ooxml:3.17')
+}
+
+
+gradle.startParameter.continueOnFailure = true
+
+
+
+
