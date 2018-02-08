@@ -26,6 +26,6 @@ public class DownloadProgressSteps {
 
     @Then("^I click on Close button when download is finished$")
     public void iClickOnCloseButtonWhenDownloadIsFinished() {
-        downloadProgressPage.clickOn(downloadProgressPage.closeBtn3());
+        downloadProgressPage.clickOn(downloadProgressPage.getCloseBtn());
     }
 }
